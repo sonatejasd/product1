@@ -1,0 +1,104 @@
+*{
+    box-sizing: border-box;
+}
+html{
+    height: 100%;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    /* grid-template-areas: "header header header"
+                        "body body body"
+                        "footer footer footer"; */
+    z-index: 1;
+}
+.header{
+    grid-area: header; 
+    height: 7vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: antiquewhite;
+}
+.foot{
+    grid-area: footer;
+    height:7vh;
+    background-color: antiquewhite;
+    text-align: center;
+    position: relative;
+    padding-top: 20px;
+    font-weight: bold;
+}
+.logo,.cart{
+    height:45px;
+    width:45px;
+}
+.buttons{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
+    height: 25px
+}
+#loginModal{
+    display: none;
+    z-index: 2;
+    position: absolute;
+    top: 40%;
+    left:40%;
+    width: 20%; /* Full width */
+    height: 15%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,2); /* Black w/ opacity */
+    border-radius: 20px;
+    box-shadow: 2px 2px;
+}
+.username,.password,.login{
+    margin:15px;
+    border-radius: 3px;
+}
+.loginBtn,.changeThemeBtn,.cart{
+    border-radius: 3px;
+    margin:1px;
+}
+.theme{
+    background-color: rgb(246, 201, 143);;
+    /* color: white; */
+}
+#products{
+    margin-top: 50px;
+    margin-left: 80px;
+    margin-bottom: 50px;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    gap: 5px
+}
+.product{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height:200px;
+    width:200px;
+    background-color: rgb(245, 220, 206);
+    box-shadow: 20px 20px 20px;
+    border-radius: 25px;
+}
+.product>img{
+    height:50px;
+    width: 50px;
+}
+.product>p{
+    text-align: center;
+}
+.product>button{
+    padding-bottom: 3px;
+}
+#counter{
+    background-color: rgb(246, 183, 183);
+    padding-left: 10px;
+    font-size: 2em;
+    font-weight: bold;
+}
