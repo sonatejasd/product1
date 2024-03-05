@@ -108,10 +108,12 @@ body{
     border: 1px solid black
 
 }
-#productModal{
+.productModal{
+    position: absolute;
     display:none;
     left: 40%;
     top: 40%;
     height: 100px;
     width: 100px;
+    background-color: aqua;
 }
